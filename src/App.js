@@ -5,7 +5,6 @@
 
 
 import React, { useState } from 'react';
-import Post from './Components/Post/Post'
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import PostList from './Components/PostList/PostList';
 
@@ -21,9 +20,10 @@ function App() {
 
   return (
     <div >
-      <PostList parentEntries={entries} />
       <CreatePostForm addNewEntryProperty={createNewEntry} />
+
       
+      <PostList parentEntries={entries} />
     </div>
   );
 }

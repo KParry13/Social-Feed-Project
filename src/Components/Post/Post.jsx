@@ -7,26 +7,45 @@
 // Bind these functions to their respective buttons onClick event. 
 // Within these functions, start to lay out the steps that need to occur when each button is clicked.
 import React, { useState } from 'react';
+import './Post.css';
 
 const Post = (props) => {
-    const [isLiked,setIsLiked] = useState(false)
-    const [color, setColor] = useState('red')
+    const [liked,setLiked] = useState("inactive");
+    const [disliked, setDisliked] = useState("inactive");
 
     function handleLike(){
-        if(isLiked){
-            setColor("green")
+        if(liked === "inactive"){
+            setLiked("green")
         }
-        
-    }
+        else {
+            setLiked("inactive")
+        }
+        setDisliked("inactive")
+    };
+
+    function handleDislike() {
+        if(disliked === "inactive"){
+            setDisliked("red")
+        }
+        else {
+            setDisliked("inactive")
+        }
+        setLiked("inactive")
+    };
+    
 
     return ( 
         <div>
             <h3>{props.entry.name}</h3>
             <p>{props.entry.post}</p>
-            <button style={{"color":color}}>Like</button>
+            <div>
+                <button className={liked} onClick={handleLike} >Like</button>
+               
+                <button className={disliked} onClick={handleDislike}>Dislike</button>
+            </div>
         </div>
      );
-}
+    }
  
 export default Post;
 
