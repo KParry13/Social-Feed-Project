@@ -5,18 +5,18 @@
 const PostList = (props) => {
 
     return ( 
-        <table className="table">
-            <tbody>
-                {props.parentEntries.map((entry, index) => {
-                    return (
-                        <tr key={index}>
-                            <td>{entry.name}</td>
-                            <td>{entry.post}</td>
-                        </tr>
-                    )
-                })}
-            </tbody>
-        </table>
+        
+        <div>
+            {props.parentEntries.map((entry, index) => {
+                return (
+                    <div key={index}>
+                        <h3>{entry.name}</h3>
+                        <p>{entry.post}</p>
+                    </div>
+                )
+            })}
+        </div>
+        
      );
 }
  
