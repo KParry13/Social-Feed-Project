@@ -23,6 +23,7 @@ function App() {
     <div >
       <PostList parentEntries={entries} />
       <CreatePostForm addNewEntryProperty={createNewEntry} />
+      
     </div>
   );
 }
