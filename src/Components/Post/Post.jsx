@@ -8,7 +8,7 @@
 // Within these functions, start to lay out the steps that need to occur when each button is clicked.
 import React, { useState } from 'react';
 import './Post.css';
-
+import dislike from "../public/dislike.png"
 
 const Post = (props) => {
     const [liked,setLiked] = useState("inactive");
@@ -43,7 +43,7 @@ const Post = (props) => {
                 <button className={liked} onClick={handleLike} >Like</button>
                
                 <button className={disliked} onClick={handleDislike}>
-                    <img src={require("../images/dislike.png")}></img>
+                    <img src={dislike}></img>
                 </button>
             </div>
         </div>
