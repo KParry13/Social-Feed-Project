@@ -9,6 +9,7 @@
 import React, { useState } from 'react';
 import './Post.css';
 
+
 const Post = (props) => {
     const [liked,setLiked] = useState("inactive");
     const [disliked, setDisliked] = useState("inactive");
@@ -41,7 +42,9 @@ const Post = (props) => {
             <div>
                 <button className={liked} onClick={handleLike} >Like</button>
                
-                <button className={disliked} onClick={handleDislike}>Dislike</button>
+                <button className={disliked} onClick={handleDislike}>
+                    <img src={require("../images/dislike.png")}></img>
+                </button>
             </div>
         </div>
      );
