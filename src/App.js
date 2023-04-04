@@ -7,6 +7,8 @@
 import React, { useState } from 'react';
 import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
 import PostList from './Components/PostList/PostList';
+import NavBar from './Components/NavBar/NavBar';
+
 import './App.css';
 
 
@@ -20,12 +22,17 @@ function App() {
   }
 
   return (
-    <div >
-      <div className='border-box'>
-        <CreatePostForm addNewEntryProperty={createNewEntry}/>
+    <div>
+      <div className='nav'>
+        <NavBar />
       </div>
-      <div className='border-box'>
-        <PostList parentEntries={entries}/>
+      <div className='app'>
+        <div className='border-box create-post'>
+          <CreatePostForm addNewEntryProperty={createNewEntry}/>
+        </div>
+        <div className='border-box post-list'>
+          <PostList parentEntries={entries}/>
+        </div>
       </div>
     </div>
   );

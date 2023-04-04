@@ -2,7 +2,7 @@
 // as well as the body of their post, and each should be bound to its own state variable.
 
 import React, { useState } from 'react';
-
+import './CreatePostForm.css'
 
 const CreatePostForm = (props) => {
 
@@ -17,19 +17,21 @@ const CreatePostForm = (props) => {
         };
         console.log(newEntry);
         props.addNewEntryProperty(newEntry);
+        setName('')
+        setPost('')
     }
-
+    
     return ( 
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Name</label>
-                <input type='name' value={name} onChange={(event) => setName(event.target.value)}/>
+            <div className='form-group'>
+                <h4><label>Name</label></h4>
+                <input type='name' className='form-control' value={name} onChange={(event) => setName(event.target.value)}/>
             </div>
-            <div>
-                <label>Post</label>
-                <input type='post' value={post} onChange={(event) => setPost(event.target.value)}/>
+            <div className='form-group'>
+               <h4><label>Post</label></h4>
+                <textarea type='post' className='form-control' value={post} onChange={(event) => setPost(event.target.value)}/>
             </div>
-            <button type='submit'>Create</button>
+            <button type='submit' className='btn btn-info createButton form-grid'>Create</button>
         </form>
      );
 }

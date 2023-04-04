@@ -1,11 +1,11 @@
-button {
+.button {
     color: black;
     padding: 10px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: bold;
     display: inline-block;
     font-size: 12px;
-    border-radius: 50%;
+    border-radius: 20%;
     margin: 5px;
 }
 
@@ -21,3 +21,16 @@ button {
     background-color: rgb(26, 255, 26);
 }
 
+img{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.p{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    max-width: 540;
+}
