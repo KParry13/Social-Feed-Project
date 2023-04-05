@@ -39,14 +39,16 @@ const Post = (props) => {
         <div>
             <h4>{props.entry.name}</h4>
             <p className='p'>{props.entry.post}</p>
-            <div>
-                <button className={liked} onClick={handleLike} >
-                    <img src='love.png' alt='heart'></img>
-                </button>
-               
-                <button className={disliked} onClick={handleDislike}>
-                    <img src='dislike.png' alt='broken heart'></img>
-                </button>
+            <div >
+                <div className='btn-group container button' role='group' aria-label='basic example'>
+                    <button type='button' className={disliked} onClick={handleDislike}>
+                        <img src='heartbreak.svg' alt='broken heart'></img>
+                    </button>
+                    
+                    <button type='button' className={liked} onClick={handleLike} >
+                        <img src='heart.svg' alt='heart'></img>
+                    </button>
+                </div>
             </div>
         </div>
      );

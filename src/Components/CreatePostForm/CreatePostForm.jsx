@@ -23,7 +23,7 @@ const CreatePostForm = (props) => {
     
     return ( 
         <form onSubmit={handleSubmit}>
-            <div className='form-group'>
+            <div className='form-group name'>
                 <h4><label>Name</label></h4>
                 <input type='name' className='form-control' value={name} onChange={(event) => setName(event.target.value)}/>
             </div>
@@ -31,7 +31,9 @@ const CreatePostForm = (props) => {
                <h4><label>Post</label></h4>
                 <textarea type='post' className='form-control' value={post} onChange={(event) => setPost(event.target.value)}/>
             </div>
-            <button type='submit' className='btn btn-info createButton form-grid'>Create</button>
+            <div className='container'>
+                <button type='submit' className='btn btn-info createButton'>Create</button>
+            </div>
         </form>
      );
 }

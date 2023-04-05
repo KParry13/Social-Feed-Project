@@ -1,13 +1,10 @@
 .button {
-    color: black;
     padding: 10px;
     text-align: center;
-    text-decoration: bold;
-    display: inline-block;
-    font-size: 12px;
     border-radius: 20%;
-    margin: 5px;
+    gap: 3px;
 }
+
 
 .inactive {
     background-color: darkgray;
@@ -22,10 +19,14 @@
 }
 
 img{
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
+    
+}
+
+.container{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 .p{

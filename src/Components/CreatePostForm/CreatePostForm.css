@@ -1,14 +1,18 @@
 
 .createButton{
-    border-style: solid;
-    border-radius: 20%;
-    padding: 5px;
     margin: 10px;
     
 }
 
-.form-grid{
+.container{
     display: flex;
     flex-direction: row-reverse;
 }
 
+.name {
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: darkslategray
+}
